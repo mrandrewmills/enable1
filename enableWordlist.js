@@ -28,6 +28,15 @@ function enable1(){
     return results;
   }
 
+  this.Wordle = function(){
+
+  "use strict";
+
+  let results = this.getXLetterWords(5);
+
+  return results;
+  }
+
   this.mustHaveThisLetter = function(letter){
 
     "use strict";
@@ -44,6 +53,30 @@ function enable1(){
     let results = this.wordlist.filter( word => !(word.includes(letter)) );
 
     return results;
+  }
+
+  this.mustHaveTheseLetters = function(letters){
+  
+    "use strict";
+
+    const lettersArr = letters.split('');
+
+    return this.wordlist.filter(word => {
+      return lettersArr.every(letter => word.includes(letter));
+    });
+
+  }
+
+  this.mustNotHaveTheseLetters = function(letters){
+  
+    "use strict";
+
+    const lettersArr = letters.split('');
+
+    return this.wordlist.filter(word => {
+      return lettersArr.every(letter => !(word.includes(letter)) );
+    });
+
   }
 
 };
