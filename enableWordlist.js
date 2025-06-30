@@ -37,24 +37,6 @@ function enable1(){
   return results;
   }
 
-  this.mustHaveThisLetter = function(letter){
-
-    "use strict";
-
-    let results = this.wordlist.filter( word => word.includes(letter) );
-
-    return results;
-  }
-
-  this.mustNotHaveThisLetter = function(letter){
-
-    "use strict";
-
-    let results = this.wordlist.filter( word => !(word.includes(letter)) );
-
-    return results;
-  }
-
   this.mustHaveTheseLetters = function(letters){
   
     "use strict";
