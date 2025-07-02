@@ -24,5 +24,12 @@ myEnable.getRandomWord(); // returns furziest, or playdays, or nongenetic, etc.
 If you play Wordle, and want to filter the wordlist down to only words with five letters:
 
 ```javascript
-myEnable.getXLetterWords(5);
+myEnable.wordlist = myEnable.getXLetterWords(5);
+```
+
+Want to filter in/filter out words containing specific letters?
+
+```javascript
+myEnable.wordlist = test.mustHaveTheseLetters("aei");
+myEnable.wordlist = test.mustNotHaveTheseLetters("hunt");
 ```
