@@ -20,3 +20,9 @@ myEnable.search("splipes"); // returns false
 ```javascript
 myEnable.getRandomWord(); // returns furziest, or playdays, or nongenetic, etc.
 ```
+
+If you play Wordle, and want to filter the wordlist down to only words with five letters:
+
+```javascript
+myEnable.getXLetterWords(5);
+```
