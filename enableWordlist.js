@@ -61,4 +61,30 @@ function enable1(){
 
   }
 
+  this.hasLetterAtX = function(letter, position) {
+
+    "use strict";
+    
+    let results = this.wordlist.filter(word => {
+      // The user is passing in a 1-based position, so we'll
+      // subtract 1 to get the 0-based index.
+      return word.charAt(position - 1) == letter;
+    });
+    
+   return results;
+}
+
+ this.doesNotHaveLetterAtX = function(letter, position) {
+
+  "use strict";
+   
+  let results = this.wordlist.filter(word => {
+     // The user is passing in a 1-based position, so we'll
+     // subtract 1 to get the 0-based index.
+     return word.charAt(position - 1) != letter;
+   });
+   
+  return results;
+  }
+
 };
